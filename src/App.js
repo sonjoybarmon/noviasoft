@@ -1,16 +1,16 @@
 import { ThemeProvider } from "@material-ui/styles";
-import React from "react";
+import React, { lazy, useEffect } from "react";
 import theme from "./theme";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/home/Home";
+// import Home from "./components/home/Home";
 import NotFound from "./components/404/NotFound";
 
-// const Home = lazy(() => import("./Components/Home/Home/Home"));
+const Home = lazy(() => import("./components/home/Home"));
 
 function App() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <React.Suspense
