@@ -1,0 +1,29 @@
+.brand_slider__card {
+  background: #00505fd6 !important;
+  margin: 0 5px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  .card_image_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+  }
+  h6 {
+    color: #fff;
+  }
+}

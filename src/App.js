@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@material-ui/styles";
+import React from "react";
+import theme from "./theme";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/home/Home";
+import NotFound from "./components/404/NotFound";
+
+// const Home = lazy(() => import("./Components/Home/Home/Home"));
 
 function App() {
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <React.Suspense
+        fallback={
+          <div
+            style={{
+              textAlign: "center",
+              height: "100vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            loading ....
+          </div>
+        }
+      >
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </Router>
+      </React.Suspense>
+    </ThemeProvider>
   );
 }
 
