@@ -1,0 +1,17 @@
+.products__wrapper {
+  padding: 60px 0;
+  background: #ebedf4;
+  h4 {
+    margin-bottom: 20px;
+  }
+  .single__products__card {
+    padding: 30px;
+    height: 300px;
+    background: #f5f6f9 !important;
+    transition: background 0.2s;
+    &:hover {
+      background: #fff !important;
+      box-shadow: 0 0 10px 5px #dde5eb;
+    }
+  }
+}

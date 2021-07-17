@@ -5,6 +5,7 @@ import Codes from "./Codes/Codes";
 import Details from "./Details/Details";
 import GreatIdeas from "./GreatIdeas/GreatIdeas";
 import HeroArea from "./HeroArea/HeroArea";
+import Products from "./Products/Products";
 import Revisit from "./Revisit/Revisit";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Layout>
         <HeroArea />
         <Category />
+        <Products />
         <Revisit />
         <Details />
         <Codes />
