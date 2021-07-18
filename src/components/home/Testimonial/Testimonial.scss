@@ -1,0 +1,17 @@
+.testimonial__wrapper {
+  padding: 60px 0;
+
+  .testimonial__card {
+    margin-top: 20px;
+    background-color: #f6f6f6;
+
+    h5 {
+      min-height: 150px;
+    }
+
+    .testimonial__media {
+      margin-top: 30px;
+      padding: 0 !important;
+    }
+  }
+}

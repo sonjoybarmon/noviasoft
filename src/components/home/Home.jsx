@@ -7,6 +7,8 @@ import GreatIdeas from "./GreatIdeas/GreatIdeas";
 import HeroArea from "./HeroArea/HeroArea";
 import Products from "./Products/Products";
 import Revisit from "./Revisit/Revisit";
+import Team from "./Team/Team";
+import Testimonial from "./Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -20,8 +22,8 @@ const Home = () => {
         <Codes />
         <GreatIdeas />
         <Brands />
-        <Codes />
-        <GreatIdeas />
+        <Testimonial />
+        <Team />
       </Layout>
     </div>
   );

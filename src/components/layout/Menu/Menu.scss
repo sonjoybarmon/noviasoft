@@ -28,3 +28,20 @@
     }
   }
 }
+
+.LinkActive {
+  color: rgb(0, 102, 255) !important;
+  // text-decoration: none !important;
+}
+
+.MenuLink {
+  text-decoration: none !important;
+  pre {
+    margin-top: 15px;
+    font-size: 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

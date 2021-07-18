@@ -3,8 +3,9 @@ import "./Products.scss";
 import SingleProducts from "./SingleProducts";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { Container } from "@material-ui/core";
+import { Container, Button } from "@material-ui/core";
 import { productData } from "./ProductData";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -30,11 +31,27 @@ const Products = () => {
           alignItems="center"
           alignContent="center"
         >
-          {productData?.map((el) => (
+          {productData?.slice(0, 8).map((el) => (
             <Grid item lg={3} md={4} sm={6} xs={12} key={el?.id}>
               <SingleProducts data={el} />
             </Grid>
           ))}
+        </Grid>
+        <Grid
+          container
+          spacing={2}
+          justifyContent="center"
+          alignItems="center"
+          alignContent="center"
+        >
+          <Link
+            to="/products"
+            style={{ textDecoration: "none", marginTop: "20px" }}
+          >
+            <Button variant="outlined" color="secondary">
+              View All Products
+            </Button>
+          </Link>
         </Grid>
       </Container>
     </div>
