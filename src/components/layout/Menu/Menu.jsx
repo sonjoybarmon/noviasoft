@@ -46,7 +46,28 @@ const CustomMenu = () => {
             <img src={logo} alt="logo" loading="lazy" />
           </div>
 
-          <Hidden smDown lgUp>
+          <Hidden xlUp smDown>
+            <div className="menu_wrapper">
+              <ul>
+                <li>Products</li>
+                <li>Industry</li>
+                <li>Service</li>
+                <li>Training</li>
+                <li>Community</li>
+                <li>Carrier</li>
+              </ul>
+            </div>
+          </Hidden>
+          <Hidden xlUp smDown>
+            <div className="selector__wrapper">
+              <div style={{ marginRight: "5px" }}>
+                <CountrySelector />
+              </div>
+              <LanguageSelector />
+            </div>
+          </Hidden>
+
+          {/* <Hidden smDown lgUp>
             <div className="menu_wrapper">
               <ul>
                 <li>Products</li>
@@ -65,7 +86,7 @@ const CustomMenu = () => {
               </div>
               <LanguageSelector />
             </div>
-          </Hidden>
+          </Hidden> */}
 
           <Hidden mdUp>
             <MenuDrawer>
