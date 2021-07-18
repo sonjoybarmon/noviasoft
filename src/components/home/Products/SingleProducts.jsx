@@ -23,7 +23,10 @@ const SingleProducts = ({ data }) => {
         </Typography>
 
         <Typography variant="body2" color="initial" gutterBottom>
-          Teg :
+          Teg :{" "}
+          {data?.teg?.map((el, i) => (
+            <strong key={i}>{el}</strong>
+          ))}
         </Typography>
       </CardContent>
     </Card>
